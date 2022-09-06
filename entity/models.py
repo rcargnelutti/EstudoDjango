@@ -5,8 +5,8 @@ class Entity(models.Model):
     name = models.CharField(max_length=255)
     document = models.CharField(max_length=25)
     active = models.BooleanField(default=True)
-    inicio_contrato = models.DateTimeField(null=True, blank=True, default='')
-    fim_contrato = models.DateTimeField(null=True, blank=True, default='')
+    inicio_contrato = models.DateTimeField(null=True, blank=True)
+    fim_contrato = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
