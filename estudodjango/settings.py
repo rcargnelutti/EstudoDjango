@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     # Frameworks
     'rest_framework',
     # Apps
-    'core',
     'company',
 ]
 
