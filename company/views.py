@@ -7,3 +7,8 @@ class CompanyViewSet(ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
     # http_method_names = ['get', 'options', 'head', 'patch', 'post', 'delete']
+
+    # sobrescrevendo queryset para filtrar/buscar por companies active
+    def get_queryset(self):
+        active = Company.objects.filter(active=True)
+        return active
