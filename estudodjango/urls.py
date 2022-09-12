@@ -3,10 +3,12 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from company import views
+from company.views import CompanyViewSet
+from entity.views import EntityViewSet
 
 router = routers.DefaultRouter()
-router.register(r'companies', views.CompanyViewSet )
+router.register(r'companies', CompanyViewSet)
+router.register(r'entities', EntityViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
