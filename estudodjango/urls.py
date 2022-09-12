@@ -14,6 +14,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/', include(router.urls)),
 
-    path('company/', include('company.urls')),
-    path('entity/', include('entity.urls')),
+    path('api/company/', include('company.urls')),
+    path('api/entity/', include('entity.urls')),
+    
 ]
